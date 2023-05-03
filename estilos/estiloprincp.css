@@ -1,0 +1,97 @@
+@charset "UTF-8";
+
+
+
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Castoro+Titling&display=swap');
+
+
+/* HEADER */
+.cabecalho{
+    position: fixed;
+    display: flex;
+    background-color: #ECF0F1;
+    height: 80px;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 1px 1px 0px #ecf0f159 ;
+}
+
+.cabecalho i.material-icons {
+    padding: 10px;
+    color: black;
+    font-size: 40px;
+}
+
+/* PRINCIPAL */
+ /* SEÇÃO landing */
+main .landing{
+    width: 100%;
+    height:100vh;
+    background: #ECF0F1 url(../Imagens/IMG_20221213_170227.jpg)  fixed no-repeat;
+    background-size: cover;
+    box-shadow: 1px 1px 0px rgba(0, 0, 0, 0.26);
+}
+
+.landing-text{
+    font-family: Arial, Helvetica, sans-serif;
+    color: rgb(54, 38, 38) ;
+    display: grid;
+    grid-template-rows: 120px auto 40px .5fr ;
+}
+
+.landing-text h1{
+    font-size: 3em;
+    background-color: #ecf0f159;
+    width: 80%;
+    grid-row: 2/3;
+    padding: 10px;
+    font-family: 'Castoro Titling', cursive;
+}
+
+.landing-text p{
+    grid-row: 4/5;
+    font-size: 1.7em;
+    background-color: #ecf0f159;
+    width: 70%;
+    padding: 10px;
+    font-family: 'Bebas Neue', cursive;
+}
+
+/* SEÇÃO DESTAQUES */
+
+.sect-destaques{
+    background-color: #ecf0f159;
+}
+
+.div-destaque{
+    background-color: white;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows:repeat(2,50px);
+    grid-template-areas:
+    "imagem precos"
+    "imagem juros"
+    "imagem produto"
+    ;
+    /* AVISO CORRIGIR NUMERO DE LINHAS ! SÃO SÓ DUAS ! */
+    height: fit-content;
+}
+
+.des-img{
+    grid-area: imagem;
+    
+}
+
+.preco{
+    grid-area: precos;
+    align-self: center;
+}
+
+.parcela{
+    grid-area: juros;
+}
+
+.produto{
+    grid-area: produto;
+}
