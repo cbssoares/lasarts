@@ -1,9 +1,17 @@
 @charset "UTF-8";
 
 
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Castoro+Titling&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,400;1,500;1,600;1,700;1,800&display=swap');
+</style>
 
-@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Castoro+Titling&display=swap');
+:root{
+    --fonteprincp:'Poppins', sans-serif;
+}
 
+body{
+    width: 90vw;
+}
 
 /* HEADER */
 .cabecalho{
@@ -26,10 +34,11 @@
 /* PRINCIPAL */
  /* SEÇÃO landing */
 main .landing{
-    width: 100%;
+    width: 100vw;
     height:100vh;
     background: #ECF0F1 url(../Imagens/IMG_20221213_170227.jpg)  fixed no-repeat;
     background-size: cover;
+    background-position: left center;
     box-shadow: 1px 1px 0px rgba(0, 0, 0, 0.26);
 }
 
@@ -46,7 +55,7 @@ main .landing{
     width: 80%;
     grid-row: 2/3;
     padding: 10px;
-    font-family: 'Castoro Titling', cursive;
+    font-family: var(--fonteprincp);
 }
 
 .landing-text p{
@@ -55,20 +64,21 @@ main .landing{
     background-color: #ecf0f159;
     width: 70%;
     padding: 10px;
-    font-family: 'Bebas Neue', cursive;
+    font-family: var(--fonteprincp);
 }
 
 /* SEÇÃO DESTAQUES */
 
 .sect-destaques{
     background-color: #ecf0f159;
+    padding-left: 5px;
 }
 
 .div-destaque{
     background-color: white;
     display: grid;
     grid-template-columns: 50% 50%;
-    grid-template-rows:repeat(2,50px);
+    grid-template-rows: repeat(2,auto) 1fr;
     grid-template-areas:
     "imagem precos"
     "imagem juros"
@@ -76,6 +86,7 @@ main .landing{
     ;
     /* AVISO CORRIGIR NUMERO DE LINHAS ! SÃO SÓ DUAS ! */
     height: fit-content;
+    column-gap: 1.7rem;
 }
 
 .des-img{
@@ -94,4 +105,5 @@ main .landing{
 
 .produto{
     grid-area: produto;
+
 }
