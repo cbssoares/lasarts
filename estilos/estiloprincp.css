@@ -37,7 +37,7 @@ main{
 main .landing{
     width:100%;
     height:100vh;
-    background: var(--conr-princp)  url(../Imagens/IMG_20221213_170227.jpg)  fixed no-repeat;
+    background: var(--conr-princp)  url(../Imagens/IMG_20221213_170227.jpg) no-repeat fixed;
     background-size: cover;
     background-position: left;
     box-shadow: 1px 1px 0px rgba(0, 0, 0, 0.26);
@@ -85,7 +85,7 @@ main .landing{
     grid-area: 1/1/2/3;
 }
 
-.div-destaque{
+.link-destaque{
     display: flex;
     flex-flow: column;
     width:90%;
@@ -95,11 +95,11 @@ main .landing{
     justify-self: center;
 }
 
-.div-destaque__prod1{
+.link-destaque__prod1{
     grid-area:2/1/3/2;
 }
 
-.div-destaque__prod2{
+.link-destaque__prod2{
     grid-area: 2/2/3/3;
 }
 
