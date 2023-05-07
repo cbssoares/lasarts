@@ -38,7 +38,6 @@ main .landing{
     width:100%;
     height:100vh;
     background: var(--conr-princp)  url(../Imagens/IMG_20221213_170227.jpg) no-repeat;
-    background-attachment: fixed;
     background-size: cover;
     background-position: left;
     box-shadow: 1px 1px 0px rgba(0, 0, 0, 0.26);
@@ -94,6 +93,7 @@ main .landing{
     padding: 10px;
     border-radius: 5px;
     justify-self: center;
+    color: black;
 }
 
 .link-destaque__prod1{
@@ -102,5 +102,20 @@ main .landing{
 
 .link-destaque__prod2{
     grid-area: 2/2/3/3;
+}
+
+.destaque-preco{
+    font-weight: bolder;
+}
+
+.destaque-parcela{
+    font-weight: 100;
+    font-size: 1em;
+    color: grey;
+
+}
+
+.destaque-produto{
+
 }
 
