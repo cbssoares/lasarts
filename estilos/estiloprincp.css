@@ -45,7 +45,7 @@ main{
 
 .landing{
     height:100vh;
-    background: var(--conr-princp)  url(../Imagens/IMG_20221213_170227.jpg) no-repeat fixed;
+    background: var(--conr-princp)  url(../Imagens/IMG_20221213_170227.jpg) no-repeat ;
     background-size: cover;
     background-position: left center;
     box-shadow: 1px 1px 0px rgba(0, 0, 0, 0.26);
