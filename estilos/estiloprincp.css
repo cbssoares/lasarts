@@ -10,9 +10,17 @@
     --conr-princp: #ECF0F1;
 }
 
+body{
+    display: grid;
+    grid-template-areas: 
+    "cabecalho"
+    "main"
+    "footer";
+    grid-template-rows: 80px auto auto;
+}
+
 /* HEADER */
 .cabecalho{
-    position: fixed;
     display: flex;
     background-color: var(--conr-princp);
     height: 80px;
@@ -20,10 +28,11 @@
     justify-content: space-between;
     align-items: center;
     box-shadow: 1px 1px 0px #ecf0f159 ;
+    grid-area: cabecalho;
+    position: fixed;
 }
 
 .cabecalho i.material-icons {
-    padding: 10px 0px 10px 10px;
     color: black;
     font-size: 40px;
 }
@@ -31,91 +40,93 @@
 /* PRINCIPAL */
  /* SEÇÃO landing */
 main{
-    width: 100vw;
+    grid-area: main;
 }
 
-main .landing{
-    width:100%;
+.landing{
     height:100vh;
-    background: var(--conr-princp)  url(../Imagens/IMG_20221213_170227.jpg) no-repeat;
+    background: var(--conr-princp)  url(../Imagens/IMG_20221213_170227.jpg) no-repeat fixed;
     background-size: cover;
-    background-position: left;
+    background-position: left center;
     box-shadow: 1px 1px 0px rgba(0, 0, 0, 0.26);
-}
-
-.landing-text{
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: var(--fonteprincp);
     color: rgb(54, 38, 38) ;
     display: flex;
     flex-flow: column;
     gap: 50px;
 }
 
-.landing-text h1{
+
+
+.landing h1{
     font-size: 3em;
     background-color: #ecf0f159;
     width: 80%;
     padding: 10px;
-    margin-top: 130px;
-    font-family: var(--fonteprincp);
+    margin-top: 50px;
 }
 
-.landing-text p{
+.landing p{
     font-size: 1.5em;
     background-color: #ecf0f159;
     width: 70%;
     padding: 10px;
-    font-family: var(--fonteprincp);
+    
 }
 
 /* SEÇÃO DESTAQUES */
 
 .sect-destaques{
     background-color: var(--conr-princp);
-    width: 100%;
-    display: grid;
-    grid-template-columns: repeat(2, 50%);
-    grid-template-rows: repeat(2,auto);
 }
 
 .sect-destaques > h1 {
     padding: 5px 0px 5px 5px;
     font-family: var(--fonteprincp);
     font-size: 1.25em;
-    grid-area: 1/1/2/3;
+}
+
+.cards-destaque{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
 }
 
 .link-destaque{
     display: flex;
     flex-flow: column;
-    width:90%;
     background-color: white;
     padding: 10px;
     border-radius: 5px;
-    justify-self: center;
     color: black;
+    flex-shrink: 1;
+    width: 45%;
+    gap: 3px;
 }
 
 .link-destaque__prod1{
-    grid-area:2/1/3/2;
+    flex-shrink: 1;
 }
 
 .link-destaque__prod2{
-    grid-area: 2/2/3/3;
+    flex-shrink: 1;
 }
+
 
 .destaque-preco{
     font-weight: bolder;
+    font-size: 1.40em;
 }
 
 .destaque-parcela{
     font-weight: 100;
     font-size: 1em;
     color: grey;
-
+    flex-shrink: 1;
 }
 
 .destaque-produto{
-
+    color: grey;
+    flex-shrink: 1;
 }
 
