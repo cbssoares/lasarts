@@ -8,6 +8,7 @@
     --fonteprincp:'Poppins', sans-serif;
 
     --conr-princp: #ECF0F1;
+    --cor-texto: rgb(54, 38, 38);
 }
 
 body{
@@ -17,6 +18,7 @@ body{
     "main"
     "footer";
     grid-template-rows: 80px auto auto;
+    background-color: var(--conr-princp);
 }
 
 /* HEADER */
@@ -41,16 +43,17 @@ body{
  /* SEÇÃO landing */
 main{
     grid-area: main;
+    background-color: var(--conr-princp);
 }
 
 .landing{
-    height:100vh;
+    height: 86vh;
     background: var(--conr-princp)  url(../Imagens/IMG_20221213_170227.jpg) no-repeat ;
     background-size: cover;
     background-position: left center;
     box-shadow: 1px 1px 0px rgba(0, 0, 0, 0.26);
     font-family: var(--fonteprincp);
-    color: rgb(54, 38, 38) ;
+    color: var(--cor-texto) ;
     display: flex;
     flex-flow: column;
     gap: 50px;
@@ -78,12 +81,14 @@ main{
 
 .sect-destaques{
     background-color: var(--conr-princp);
+    margin-bottom: 50px;
 }
 
 .sect-destaques > h1 {
     padding: 5px 0px 5px 5px;
     font-family: var(--fonteprincp);
     font-size: 1.25em;
+    
 }
 
 .cards-destaque{
@@ -128,5 +133,54 @@ main{
 .destaque-produto{
     color: grey;
     flex-shrink: 1;
+}
+
+/* Card Conheça nossos produtos */
+
+.main-card-conheca{
+    margin: auto;
+    background: var(--conr-princp) url("../Imagens/IMG_20221117_170707.jpg") no-repeat ;
+    background-size: cover;
+    background-position: right center;
+    padding: 20px;
+}
+
+.main-card-conheca > a{
+    color: white ;
+    font-family: var(--fonteprincp);
+}
+
+.main-card-conheca > a > h2 {
+    text-align: center;
+    background-color: #cfd1d19c ;
+    width: fit-content;
+    padding: 5px;
+    margin-bottom: 10px;
+    
+}
+
+.main-card-conheca > a > p {
+    background-color: #cfd1d19c;
+    border: solid white 2px;
+    border-radius: 5px;
+    width: fit-content;
+    padding: 5px 30px;
+    margin: auto;
+
+}
+
+footer {
+    grid-area: footer;
+    background-color: var(--conr-princp);
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.fa-brands{
+    font-size:3em;
+    padding: 5px;
+    color: var(--cor-texto);
 }
 
