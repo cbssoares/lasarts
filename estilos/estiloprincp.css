@@ -47,7 +47,7 @@ main{
  /* SEÇÃO landing */
 
 .landing{
-    height: 86vh;
+    height: calc(100vh - 80px);
     background: var(--conr-princp)  url(../Imagens/IMG_20221213_170227.jpg) no-repeat fixed;
     background-size: cover;
     background-position: left center;
