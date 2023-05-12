@@ -169,6 +169,8 @@ main{
 
 }
 
+/* Rodapé */
+
 footer {
     grid-area: footer;
     background-color: var(--conr-princp);
