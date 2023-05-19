@@ -23,18 +23,21 @@ body{
 
 /* HEADER */
 .cabecalho{
+    grid-area: cabecalho;
+    position: fixed;
+    width: 100%;
+}
+
+.sect-cabecalho{
     display: flex;
     background-color: var(--conr-princp);
     height: 80px;
-    width: 100%;
     justify-content: space-between;
     align-items: center;
     box-shadow: 1px 1px 0px #ecf0f159 ;
-    grid-area: cabecalho;
-    position: fixed;
 }
 
-.cabecalho i.material-icons {
+.material-icons {
     color: black;
     font-size: 40px;
 }
@@ -46,34 +49,44 @@ main{
 }
  /* SEÇÃO landing */
 
+.main-sect {
+    height: calc(100vh - 90px);
+}
 .landing{
     height: calc(100vh - 80px);
-    background: var(--conr-princp)  url(../Imagens/IMG_20221213_170227.jpg) no-repeat fixed;
+    background: var(--conr-princp)  url(../Imagens/IMG_20221213_170227.jpg) no-repeat ;
     background-size: cover;
     background-position: left center;
     box-shadow: 1px 1px 0px rgba(0, 0, 0, 0.26);
     font-family: var(--fonteprincp);
     color: var(--cor-texto) ;
+    margin-bottom: 10px;
+}
+
+.textos-landing{
+    height: 100%;
     display: flex;
     flex-flow: column;
-    gap: 50px;
+    justify-content: center;
+    gap: 30px;
 }
 
+.titulo-landing, .p-landing {
+    background-color: #ecf0f159;
+    padding: 10px;
+    border-radius: 10px;
+    border: solid white 1.5px;
 
+}
 
-.landing h1{
+.titulo-landing{
     font-size: 3em;
-    background-color: #ecf0f159;
     width: 80%;
-    padding: 10px;
-    margin-top: 50px;
 }
 
-.landing p{
+.p-landing{
     font-size: 1.5em;
-    background-color: #ecf0f159;
     width: 70%;
-    padding: 10px;
     
 }
 
@@ -81,17 +94,24 @@ main{
 
 .sect-destaques{
     background-color: var(--conr-princp);
-    margin-bottom: 50px;
 }
 
-.sect-destaques > h1 {
-    padding: 5px 0px 5px 5px;
+.container-destaques{
+
+}
+
+.titulo-destaque {
+    padding: 10px;
     font-family: var(--fonteprincp);
-    font-size: 1.25em;
-    
+    font-size: 2em;
+    color: var(--cor-texto);
+    width: fit-content;
+    border-width: 3px;
+    background-color: #dee0e0;
+    margin-bottom: 20px;
 }
 
-.cards-destaque{
+.box-destaque{
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
@@ -103,6 +123,7 @@ main{
     background-color: white;
     padding: 10px;
     border-radius: 5px;
+    border: 1px solid rgba(31, 25, 54, 0.377);
     color: black;
     flex-shrink: 1;
     width: 45%;
@@ -137,7 +158,7 @@ main{
 
 /* Card Conheça nossos produtos */
 
-.main-card-conheca{
+.card-conheca{
     margin: auto;
     background: var(--conr-princp) url("../Imagens/IMG_20221117_170707.jpg") no-repeat ;
     background-size: cover;
@@ -145,12 +166,12 @@ main{
     padding: 20px;
 }
 
-.main-card-conheca > a{
-    color: white ;
+.card-conheca > a{
+    color: var(--cor-texto) ;
     font-family: var(--fonteprincp);
 }
 
-.main-card-conheca > a > h2 {
+.card-conheca > a > h2 {
     text-align: center;
     background-color: #cfd1d19c ;
     width: fit-content;
@@ -159,7 +180,7 @@ main{
     
 }
 
-.main-card-conheca > a > p {
+.card-conheca > a > p {
     background-color: #cfd1d19c;
     border: solid white 2px;
     border-radius: 5px;
