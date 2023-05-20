@@ -24,8 +24,8 @@ body{
 /* HEADER */
 .cabecalho{
     grid-area: cabecalho;
-    position: fixed;
     width: 100%;
+    position: fixed;
 }
 
 .sect-cabecalho{
@@ -37,13 +37,14 @@ body{
     box-shadow: 1px 1px 0px #ecf0f159 ;
 }
 
+
 .material-icons {
     color: black;
     font-size: 40px;
 }
 
 /* PRINCIPAL */
-main{
+.principal{
     grid-area: main;
     background-color: var(--conr-princp);
 }
